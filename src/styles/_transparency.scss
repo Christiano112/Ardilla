@@ -1,0 +1,103 @@
+@use './custom' as *;
+
+.transparency {
+    padding: 5rem 0;
+    background: #FFF;
+
+    .container {
+
+        .row {
+
+            .col {
+
+                h1 {
+                    font-weight: 800;
+                    font-size: 5rem;
+                    line-height: 5rem;
+                    color: $light-blue;
+
+                    span {
+                        color: $light-pink;
+                        display: block;
+                    }
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 40px;
+                    color: $light-blue;
+                    margin: 3rem 0;
+                }
+
+                button {
+                    background: $primary;
+                    color: #FFF;
+                    border: none;
+                    padding: .5rem 1rem;
+                }
+
+                &.calculator {
+                    background: url('/assets/calculator-bg.svg') no-repeat center center/cover;
+                    border-radius: 20px;
+                    z-index: 100;
+                    padding: 3rem 2rem 0 2rem;
+                    // display: flex;
+                    // gap: 3rem;
+
+                    .calculator-form {
+                        margin-bottom: 3rem;
+
+                        h2 {
+                            font-weight: 700;
+                            font-size: 2rem;
+                            line-height: 3rem;
+                            color: #FFF;
+                            margin-bottom: 3rem;
+                        }
+
+                        .form-group {
+                            margin-bottom: 1.5rem;
+                        }
+
+                        .form-label {
+                            font-weight: 500;
+                            font-size: 1rem;
+                            color: #9CA3AF;
+                        }
+
+                        .custom-select {
+                            border-bottom: 1px solid #ffffff;
+                            color: #ffffff;
+                            outline: none !important;
+                        }
+
+                        .form-control {
+                            border-bottom: 1px solid #ffffff;
+                            color: #ffffff;
+                            outline: none !important;
+
+                            &::placeholder {
+                                color: #ffffff;
+                            }
+                        }
+
+                        .custom-select:focus,
+                        .form-control:focus {
+                            outline: none !important;
+                        }
+                    }
+
+                    .calculator-graph {
+                        align-self: flex-end;
+
+                        img {
+                            min-width: 20rem;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
