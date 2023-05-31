@@ -16,7 +16,7 @@ const Traction = () => {
             <div>
               <p>Investment in <span>2022</span></p>
               <CountUp start={100} end={1100} duration={1800} delay={10} separator=","
-                prefix="N" suffix='M' decimals={0} useEasing={false} enableScrollSpy={true} className='countUp' />M
+                prefix="N" suffix='M' decimals={0} useEasing={false} enableScrollSpy={true} className='countUp' />
             </div>
             <div>
               <p>Risk <span>Management</span></p>
@@ -26,7 +26,7 @@ const Traction = () => {
             <div>
               <p>Investment <span>paid back</span></p>
               <CountUp start={100} end={1100} duration={1800} delay={10} separator=","
-                prefix="N" suffix='M' decimals={0} useEasing={false} enableScrollSpy={true} className='countUp' />M
+                prefix="N" suffix='M' decimals={0} useEasing={false} enableScrollSpy={true} className='countUp' />
             </div>
           </Col>
         </Row>

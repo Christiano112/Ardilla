@@ -47,13 +47,13 @@
                 &.testimonial-images {
                     margin-top: 5rem;
                     display: flex;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
                     gap: 3rem;
                     padding-bottom: 2rem;
                     overflow-x: auto;
 
-                    @include media-query($custom-breakpoint-medium) {
+                    @include media-query($custom-breakpoint-small) {
                         margin-top: 3rem;
                         gap: 1.5rem;
                         flex-direction: column;

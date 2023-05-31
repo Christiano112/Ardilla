@@ -1,11 +1,11 @@
 @use './custom' as *;
 
 .transparency {
-    padding: 5rem 0;
+    padding-top: 5rem;
     background: #FFF;
 
     @include media-query($custom-breakpoint-medium) {
-        padding: 3rem 0;
+        padding-top: 3rem;
     }
 
     .container {
