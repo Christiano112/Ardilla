@@ -1,11 +1,8 @@
-import Header from "./header";
 import { Container, Row, Col } from './bootstrap-export';
 
 const Main = () => {
     return (
-        <main className="bg-secondary">
-            <Header />
-
+        <main>
             <Container>
                 <Row>
                     <Col className="hero-text">

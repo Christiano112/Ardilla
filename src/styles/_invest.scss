@@ -1,0 +1,89 @@
+@use './custom' as *;
+
+.invest {
+    background: #FFFDF2;
+    padding-top: 5rem;
+
+    @include media-query($custom-breakpoint-medium) {
+        padding-top: 3rem;
+    }
+
+    .container {
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            @include media-query($custom-breakpoint-large) {
+                position: static;
+            }
+
+            .col {
+
+                &.hero-text {
+
+                    h1 {
+                        font-weight: 800;
+                        font-size: 5rem;
+                        line-height: 6rem;
+                        color: $light-blue;
+
+                        @include media-query($custom-breakpoint-medium) {
+                            font-size: 2.5rem;
+                            line-height: 3rem;
+                        }
+
+                        span {
+                            color: #0D9488;
+                        }
+                    }
+
+                    p {
+                        color: $light-blue;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        line-height: 3rem;
+                        margin-top: 3rem;
+                        width: 60%;
+
+                        @include media-query($custom-breakpoint-medium) {
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                            width: 100%;
+                            margin-top: 1rem;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    button {
+                        border: 1px solid $primary;
+                        background: transparent;
+                        width: 20rem;
+                        height: 3rem;
+                        color: $primary;
+                        white-space: nowrap;
+                        margin: 2rem 0;
+
+                        &:hover {
+                            background: $primary;
+                            color: #FFF;
+                        }
+                    }
+                }
+
+                .invest-img {
+                    vertical-align: middle;
+                    align-self: center;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+
+                    @include media-query($custom-breakpoint-large) {
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+}

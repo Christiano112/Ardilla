@@ -7,4 +7,34 @@ $light-pink: #E8356D;
 $primary: $light-purple;
 $secondary: $dark-purple;
 
+.navbar-light .navbar-toggler-icon {
+    background-image: url("/assets/mobile-nav.svg");
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("/assets/mobile-nav.svg");
+}
+
+.nav-link {
+    color: #FFF !important;
+}
+
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+$custom-breakpoint-small: 576px;
+$custom-breakpoint-medium: 768px;
+$custom-breakpoint-large: 992px;
+
+@mixin media-query($custom-breakpoint) {
+    @media only screen and (max-width: $custom-breakpoint) {
+        @content;
+    }
+}
+
+$navbar-toggler-focus-width: 1;
+
 @import "/node_modules/bootstrap/scss/bootstrap";

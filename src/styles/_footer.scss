@@ -2,9 +2,19 @@
 
 
 .footer {
+    margin-top: -10rem;
+    z-index: -10;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: -20rem;
+    }
 
     .container {
-        padding-top: 10rem;
+        padding-top: 15rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 25rem;
+        }
 
         .row {
             display: flex;
@@ -87,18 +97,13 @@
     padding: 3rem 3rem 0 3rem;
     position: relative;
     min-height: 15rem;
+    z-index: 10000;
 
     @include media-breakpoint-down(md) {
         width: 90%;
     }
 
     @include media-breakpoint-down(sm) {
-        position: static;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        align-items: center;
-        justify-content: center;
         padding: 3rem 1rem 0 1rem;
     }
 
@@ -149,6 +154,7 @@
             position: static;
             width: 100%;
             right: 0;
+            margin-top: 3rem;
         }
 
         img {
