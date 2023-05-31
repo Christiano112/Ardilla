@@ -185,3 +185,54 @@
         }
     }
 }
+
+.landing-popup {
+    z-index: 100000;
+    width: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include media-query($custom-breakpoint-medium) {
+        width: 80%;
+    }
+
+    @include media-query($custom-breakpoint-small) {
+        width: 94%;
+    }
+
+    .landing-popup-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 3rem;
+
+        @include media-query($custom-breakpoint-medium) {
+            gap: 1.5rem;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: #22C55E;
+            text-align: center;
+
+            @include media-query($custom-breakpoint-medium) {
+                font-size: 1.1rem;
+                line-height: 1.3rem;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: .8rem;
+            line-height: 1rem;
+            text-align: center;
+            color: #9CA3AF;
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@use './custom' as *;
+
+.career {
+
+    .career-main {
+        padding: 5rem 0;
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 3rem auto;
+            width: 80%;
+
+            .col {
+                padding-top: 3rem;
+                border-radius: 6px;
+
+                &:nth-child(1) {
+                    background: #F59E0B;
+                    align-self: start;
+                }
+
+                &:nth-child(2) {
+                    background: #E8356D;
+                    align-self: end;
+                    margin-right: -5rem;
+                }
+
+                &:nth-child(3) {
+                    background: #0D9488;
+                    align-self: start;
+                }
+
+                h1 {
+                    font-weight: 500;
+                    font-size: 80px;
+                    line-height: 99px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .career-positions {
+        background: #F5F5F5;
+        padding: 5rem 2rem;
+
+        @include media-query($custom-breakpoint-medium) {
+            padding: 3rem 1rem;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 3.7rem;
+            line-height: 4.6rem;
+            color: #3D0072;
+            margin-bottom: 3rem;
+
+            @include media-query($custom-breakpoint-medium) {
+                font-size: 2.5rem;
+                line-height: 3rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+
+            @include media-query($custom-breakpoint-small) {
+                grid-template-columns: 1fr;
+            }
+
+            .col {
+                padding: 2rem;
+                border-radius: 16px;
+            }
+        }
+    }
+
+    .career-hire {
+        background: #F3F4F6;
+        padding: 5rem 2rem;
+
+        @include media-query($custom-breakpoint-medium) {
+            padding: 3rem 1rem;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 3.7rem;
+            line-height: 4.6rem;
+            color: #3D0072;
+            margin-bottom: 4rem;
+
+            @include media-query($custom-breakpoint-medium) {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: #3D0072;
+            margin: 2rem 0;
+
+            @include media-query($custom-breakpoint-medium) {
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 2.5rem;
+            color: #3D0072;
+        }
+    }
+
+    .career-footer-pic {
+        padding: 5rem 2rem 15rem 2rem;
+
+        @include media-query($custom-breakpoint-medium) {
+            padding: 3rem 1rem 10rem 1rem;
+        }
+    }
+}

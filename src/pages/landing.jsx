@@ -1,9 +1,53 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Nav, Navbar } from '../components/bootstrap-export';
 
+// eslint-disable-next-line react/prop-types
+const PopUp = ({ show, setShow }) => {
+    if (!show) return null;
+
+    return (
+        <div className='landing-popup bg-white mx-auto p-5'>
+            <button onClick={() => setShow(false)} className='text-dark border border-0 bg-transparent'>
+                <img src="/assets/popup-back.svg" alt="back" className='me-2' />
+                Go Back
+            </button>
+            <div className='landing-popup-content'>
+                <img src="/assets/popup-img.svg" alt="valid check" className='img-fluid' />
+                <h1>
+                    <span className=''>
+                        <img src="/assets/celebrate.svg" alt="cone" className='img-fluid me-2' />
+                    </span>
+                    Great!! You’re on the waitlist
+                </h1>
+                <p>An email would be sent to you in regards, Thank You</p>
+                <img src="/assets/popup-social.svg" alt="social" />
+            </div>
+        </div>
+    )
+}
+
 const LandingPage = () => {
+    const [show, setShow] = React.useState(false);
+    const [input, setInput] = React.useState('');
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setShow(true);
+        setInput('');
+
+        console.log({ 'email': input });
+
+        setTimeout(() => {
+            navigate('/home');
+        }, 3000);
+    }
+
     return (
         <div className='landing'>
+            <PopUp show={show} setShow={setShow} />
+
             <Container fluid className='landing-top'>
                 <Navbar expand="sm" variant='dark' collapseOnSelect>
                     <Container fluid>
@@ -13,8 +57,8 @@ const LandingPage = () => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ms-auto justify-end">
-                                <Nav.Link href="/career">
-                                    <Link to='/career' className='text-white text-decoration-none'>Features</Link>
+                                <Nav.Link href="/career" className='text-white text-decoration-none'>
+                                    Features
                                 </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
@@ -27,14 +71,17 @@ const LandingPage = () => {
                         </h1>
                         <p>Wealth building is possible. You just need the right partner. With better financial tools, Ardilla has made it so much easier for you to start
                             building wealth. Take advantage of the Ardilla platform by signing up with your email address.</p>
-                        <form className="mb-3 landing-input rounded rounded-pill">
+                        <form className="mb-3 landing-input rounded rounded-pill" onSubmit={handleSubmit}>
                             <input
                                 placeholder="someone@example.com"
                                 aria-label="someone@example.com"
                                 aria-describedby="input"
                                 type='email'
+                                value={input}
+                                onChange={(e) => setInput(e.target.value)}
+                                required
                             />
-                            <button id='input' className='rounded rounded-pill text-white'>
+                            <button type='submit' id='input' className='rounded rounded-pill text-white'>
                                 Access More
                                 <span><img src='/assets/send-white-icon.svg' alt='send' className='ms-2' /></span>
                             </button>

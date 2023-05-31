@@ -12,11 +12,11 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto d-flex gap-2 gap-md-4 justify-content-between align-items-center align-content-md-center">
                             <NavDropdown title="Products" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/interest">Products</NavDropdown.Item>
+                                <NavDropdown.Item href="/interest">Interest</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="#">Business <span className='border rounded'>BETA</span></Nav.Link>
                             <NavDropdown title="Company" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/career">Company</NavDropdown.Item>
+                                <NavDropdown.Item href="/career">Career</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="/">Learn</Nav.Link>
                         </Nav>
