@@ -5,7 +5,7 @@ const Transparency = () => {
         <div className='transparency'>
             <Container>
                 <Row>
-                    <Col>
+                    <Col className='transparency-text'>
                         <h1>We’re Keen On <span>Transparency</span></h1>
                         <p>Calculate your interests everytime you save on our platform</p>
                         <button className="rounded rounded-pill">Get Started</button>
@@ -13,12 +13,12 @@ const Transparency = () => {
                     <Col className='calculator'>
                         <h2>Calculate Your Interests</h2>
                         <Row>
-                            <Col className='calculator-form'>
+                            <Col className='calculator-form' xs={12} md={6}>
                                 <Form className='d-flex flex-column gap-4'>
                                     <Form.Group className="mb-3" controlId="formGroupPlan">
                                         <Form.Label>How often are you saving?</Form.Label>
                                         <Form.Select aria-label="Default select example" className='bg-transparent custom-select'>
-                                            <option value="1" selected>Monthly</option>
+                                            <option value="1" defaultValue>Monthly</option>
                                             <option value="2">Weekly</option>
                                             <option value="3">Daily</option>
                                         </Form.Select>
@@ -33,7 +33,7 @@ const Transparency = () => {
                                     </Form.Group>
                                 </Form>
                             </Col>
-                            <Col className='calculator-graph'>
+                            <Col className='calculator-graph' xs={12} md={6}>
                                 <img src='/assets/calculator-result.svg' alt='calculator-result' className='img-fluid' />
                             </Col>
                         </Row>

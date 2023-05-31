@@ -172,10 +172,10 @@ const Product = () => {
     return (
         <div className='product'>
             <Container>
-                <h1>Product</h1>
                 <div className='product-items'>
                     {productContent.map((product) => (
                         <Row key={product.id}>
+                            <h1>Product</h1>
                             <Col>
                                 <h3>{product.title}</h3>
                                 <h5>{product.tagline}</h5>

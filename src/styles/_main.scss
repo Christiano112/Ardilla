@@ -2,20 +2,10 @@
 
 main {
     background: url('/assets/background.svg') no-repeat center center/cover;
+    margin-top: 5rem;
 
-    header {
-        box-shadow: 0px 4px 10px rgba(136, 7, 247, 0.07);
-
-        .container {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-            justify-content: space-around;
-
-            .nav {
-                display: none;
-            }
-        }
+    @include media-query($custom-breakpoint-medium) {
+        margin-top: 3rem;
     }
 
     .container {
@@ -31,6 +21,10 @@ main {
                 margin-bottom: 3rem;
                 text-align: center;
 
+                @include media-query($custom-breakpoint-medium) {
+                    gap: 1.5rem;
+                }
+
                 h1 {
                     font-size: 6rem;
                     background: linear-gradient(91.7deg, #FFEB35 7.5%, rgba(25, 253, 130, 0.99) 107.24%);
@@ -38,6 +32,10 @@ main {
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
                     text-fill-color: transparent;
+
+                    @include media-query($custom-breakpoint-medium) {
+                        font-size: 2.5rem;
+                    }
                 }
 
                 button {
@@ -45,16 +43,19 @@ main {
                     color: $primary;
                     border: none;
                     padding: .5rem 1rem;
+
+                    &:hover {
+                        background: $primary;
+                        color: #fff;
+                        border: 1px solid $primary;
+                    }
                 }
             }
 
             .hero-img {
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 2rem;
-                text-align: center;
             }
         }
     }

@@ -1,0 +1,157 @@
+@use './custom' as *;
+
+.traction {
+    background: url('/assets/calculator-bg.svg') no-repeat center center/cover;
+    padding: 5rem 0 15rem 0;
+
+    @include media-query($custom-breakpoint-medium) {
+        padding: 3rem 0 10rem 0;
+    }
+
+    .container {
+
+        .row {
+
+            .traction-header {
+
+                h1 {
+                    font-weight: 800;
+                    font-size: 5rem;
+                    line-height: 6rem;
+                    color: #FFFFFF;
+
+                    @include media-query($custom-breakpoint-medium) {
+                        font-size: 2.5rem;
+                        line-height: 4rem;
+                    }
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                    line-height: 1.4rem;
+                    color: #FFFFFF;
+                    margin-top: 2rem;
+
+                    @include media-query($custom-breakpoint-medium) {
+                        font-size: 1rem;
+                        line-height: 1.2rem;
+                    }
+                }
+            }
+
+            .traction-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+                margin-top: 5rem;
+
+                @include media-query($custom-breakpoint-medium) {
+                    flex-direction: column;
+                    gap: 2rem;
+                    margin-top: 3rem;
+                }
+
+                div {
+                    width: 20rem;
+                    height: 25rem;
+                    padding: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 0;
+                    flex-wrap: wrap;
+
+                    @include media-query($custom-breakpoint-medium) {
+                        width: 13rem;
+                        height: 28rem;
+                        padding: 1rem;
+                    }
+
+                    p {
+                        font-weight: 700;
+                        font-size: 1.2rem;
+                        line-height: 1.4rem;
+                        color: #333228;
+
+                        @include media-query($custom-breakpoint-medium) {
+                            font-size: .8rem;
+                            line-height: 1.2rem;
+                        }
+                    }
+                }
+
+                &>div:nth-child(1) {
+                    background: #D2FFDE;
+                    border-radius: 70px 70px 0px 70px;
+
+                    @include media-query($custom-breakpoint-medium) {
+                        border-radius: 35px 35px 0px 35px;
+                    }
+
+                    p {
+
+                        span {
+                            background: #33593D;
+                            border-radius: 2px;
+                            padding: .2rem;
+                            margin-left: .2rem;
+                        }
+                    }
+                }
+
+                &>div:nth-child(2) {
+                    background: #C8C1FD;
+                    border-radius: 70px 70px 70px 0px;
+
+                    @include media-query($custom-breakpoint-medium) {
+                        border-radius: 35px 35px 35px 0px;
+                    }
+
+                    p {
+
+                        span {
+                            background: #35298A;
+                            border-radius: 2px;
+                            padding: .2rem;
+                            margin-left: .2rem;
+                        }
+                    }
+                }
+
+                &>div:nth-child(3) {
+                    background: #FAF7C3;
+                    border-radius: 70px 70px 70px 0px;
+
+                    @include media-query($custom-breakpoint-medium) {
+                        border-radius: 35px 35px 35px 0px;
+                    }
+
+                    p {
+
+                        span {
+                            background: #9F9704;
+                            border-radius: 2px;
+                            padding: .2rem;
+                            margin-left: .2rem;
+                        }
+                    }
+                }
+
+                .countUp {
+                    font-weight: 800;
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    color: #2A332C;
+                    white-space: nowrap;
+
+                    @include media-query($custom-breakpoint-medium) {
+                        font-size: 1.5rem;
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
