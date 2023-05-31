@@ -11,6 +11,8 @@
 @use 'traction';
 @use 'footer';
 
+@use 'interest';
+
 
 @import "custom";
 
@@ -28,7 +30,6 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-/* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
 }

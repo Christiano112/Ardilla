@@ -22,7 +22,7 @@ const Header = () => {
                         </Nav>
                         <Nav className='justify-end d-flex gap-2 gap-md-4 justify-content-between align-items-center align-content-md-center'>
                             <Nav.Link href="#">Sign in</Nav.Link>
-                            <Nav.Link href="#" className='bg-primary rounded rounded-pill p-2'>Create Account</Nav.Link>
+                            <Nav.Link href="#" className='bg-primary rounded rounded-pill p-2 create-account'>Create Account</Nav.Link>
                             <Nav.Link href="#">
                                 <img src="/assets/world.svg" alt="search" />
                                 <img src="/assets/down-arrow.svg" alt="arrow" />

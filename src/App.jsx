@@ -4,6 +4,8 @@ import Interest from './pages/interest';
 import LandingPage from './pages/landing';
 import Career from './pages/career';
 
+import './styles/index.scss';
+
 function App() {
 
   return (
@@ -13,6 +15,7 @@ function App() {
         <Route path="/interest" element={<Interest />} />
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/career" element={<Career />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   )

@@ -37,4 +37,12 @@ $custom-breakpoint-large: 992px;
 
 $navbar-toggler-focus-width: 1;
 
+//Accordion
+$accordion-icon-color: $primary;
+$accordion-icon-active-color: $secondary;
+$accordion-button-icon: url("/assets/plus.svg");
+$accordion-icon-width: 1.8rem;
+$accordion-padding-y: 1.7rem;
+$accordion-padding-x: 1.7rem;
+
 @import "/node_modules/bootstrap/scss/bootstrap";
